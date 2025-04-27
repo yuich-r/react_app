@@ -1,0 +1,15 @@
+main {
+    padding: 20px;
+    width: 1000px; /* コンテンツエリアの幅を小さく */
+    background-color: #e0f7fa ;
+    margin-bottom: 20px;
+  }
+  
+.content-h2{
+    border-left: solid 8px #5f7da5;
+    padding: 0.5em 0.5em;
+    background-color: #f8f8f8;
+}
+p {
+    margin-left: 1em;
+}
