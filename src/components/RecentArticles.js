@@ -3,11 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/RecentArticles.css';
 
-function RecentArticles({ articles, limit = 5 }) {
+function RecentArticles({ TestData, limit = 5 }) {
   // 投稿日でソートして新しい順に並べる
-  const sortedArticles = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sortedTestData = [...TestData].sort((a, b) => new Date(b.date) - new Date(a.date));
   // 指定された件数だけ取得
-  const recentArticles = sortedArticles.slice(0, limit);
+  const recentTestData = sortedTestData.slice(0, limit);
 
   return (
     <div className="recent-articles">
@@ -25,7 +25,7 @@ function RecentArticles({ articles, limit = 5 }) {
         <div className='article-news'>
             <div className='article-KBN'>
             <ol>
-                    {recentArticles.map((article) => (
+                    {recentTestData.map((article) => (
                         <li key={article.id}>
                             <Link to={`/articles/${article.id}`}>{article.KBN}</Link>
                         </li>
@@ -34,7 +34,7 @@ function RecentArticles({ articles, limit = 5 }) {
             </div>
             <div className='article-title'>
                 <ol>
-                    {recentArticles.map((article) => (
+                    {recentTestData.map((article) => (
                         <li key={article.id}>
                             <Link to={`/Content`}>{article.title}</Link>
                         </li>
@@ -43,7 +43,7 @@ function RecentArticles({ articles, limit = 5 }) {
             </div>
             <div className='article-date'>
                 <ol>
-                    {recentArticles.map((article) => (
+                    {recentTestData.map((article) => (
                         <li key={article.id}>
                             <span>{formatDate(article.date)}</span>
                         </li>

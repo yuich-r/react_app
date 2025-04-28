@@ -1,5 +1,5 @@
 // src/data/articles.js
-export const articles = [
+export const TestData = [
   {
     id: 'article-1',
     KBN: 'IPA_SC',
