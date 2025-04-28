@@ -12,7 +12,8 @@ function NotionDataFetcher() {
       try {
         const response = await fetch(NOTION_API_URL, {
           method: 'GET',
-/*           headers: {
+/*           
+          headers: {
             'Authorization': `Bearer ${NOTION_API_KEY}`,
             'Content-Type': 'application/json',
             'Notion-Version': NOTION_VERSION,
