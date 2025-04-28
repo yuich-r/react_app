@@ -13,7 +13,7 @@ function ArticleList() {
       <Navigation />
       <div className="main-content">
         <main>
-          <p>CHANGE</p>
+          <p>～件</p>
           <div className='article'>
             <NotionDataFetcher title=""/>
           </div>
