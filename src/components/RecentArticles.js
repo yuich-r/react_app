@@ -54,6 +54,12 @@ function RecentArticles(props) {
         const sortedDatas = [...receivedData].sort((a, b) => new Date(b.date) - new Date(a.date));
         // 指定された件数だけ取得
         const recentDatas = sortedDatas.slice(0, props.limit);
+        var ArticleValueFlg = true;
+        if (receivedData.length <= 5) {
+            ArticleValueFlg = false;
+        } else {
+            ArticleValueFlg = true;
+        }
 
         return (
             <>
@@ -103,7 +109,8 @@ function RecentArticles(props) {
 
 
                     </div>
-                    <a href='/articleList' className='more-news-link'>もっと見る</a>
+                    {ArticleValueFlg && <a href='/articleList' className='more-news-link'>もっと見る</a>}
+
                 </div >
 
 
