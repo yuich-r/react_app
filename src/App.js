@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Re
 import ArticleList from './pages/ArticleList.js';
 import Profile from './pages/Profile.js';
 import ContactForm from './pages/ContactForm.js';
-import Content from './components/Content.js';
+import Article from './pages/Article.js';
 import TopPage from './pages/TopPage.js';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/articlelist" element={<ArticleList />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/form" element={<ContactForm />} />
-        <Route path="/content" element={<Content />} />
+        <Route path="/content" element={<Article />} />
 
         {/* 他のルートもここに追加できます */}
       </Routes>

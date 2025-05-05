@@ -4,7 +4,7 @@ import './css/Navigation.css'; // スタイルシートをインポート
 
 function Navigation() {
   return (
-    <nav>
+    <nav className='header-navigation'>
       <ul>
         <li><Link to="/">ホーム</Link></li>
         <li><Link to="/articlelist">学習記事</Link></li>

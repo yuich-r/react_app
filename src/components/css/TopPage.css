@@ -1,32 +1,14 @@
-body {
-    margin:0 ;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  
-  
-  .main-content {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center; /* コンテンツエリアを中央に配置 */
-    padding-left: 20px; /* 左側の空白 */
-    padding-right: 20px; /* 右側の空白 */
-    
-  }
-  
-  /* メディアクエリ：画面幅が 768px 以下の場合に適用 */
+/* メディアクエリ：画面幅が 768px 以下の場合に適用 */
 @media (max-width: 768px) {
 
 
-    .main-content {
-      flex-direction: column; /* コンテンツを縦に並べる */
-    }
-  
-    .content {
-      width: 100%; /* コンテンツの幅を100%にする */
-    }
+  .main-content {
+    flex-direction: column;
+    /* コンテンツを縦に並べる */
   }
+
+  .content {
+    width: 100%;
+    /* コンテンツの幅を100%にする */
+  }
+}

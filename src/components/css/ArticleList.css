@@ -1,0 +1,43 @@
+.article-container {
+	display: flex;
+	height: 100px;
+	margin-bottom: 10px;
+	background-color: #f9f9f9;
+	/*border: 1px solid #ddd;*/
+}
+
+.article-container:hover {
+	background-color: #e0f2f7;
+}
+
+.article-thumnail {
+	flex: 1;
+}
+
+.article-data {
+	flex: 6;
+	height: 90%;
+	color: black;
+	margin: 5px;
+	border-left: solid 1px #ddd;
+}
+
+.article-data h2 {
+	margin-left: 10px;
+}
+
+.article-updatedAd {
+	flex: 1;
+}
+
+img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.article-data li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
