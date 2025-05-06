@@ -5,6 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import '../components/css/ContactForm.css'; // スタイルシートをインポート
+import { init, send } from 'emailjs-com';
+
 
 
 
@@ -14,15 +16,42 @@ function ContactForm() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleClick = (e) => {
+    e.preventDefault();
+    handleSubmit();
+  };
+
+  const handleSubmit = () => {
     // ここにフォーム送信の処理を記述 (例: APIへの送信)
-    console.log({ name, email, subject, message });
-    alert('お問い合わせありがとうございます！'); // 簡単な完了メッセージ
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
+    const userID = process.env.REACT_APP_USER_ID
+    const serviceID = process.env.REACT_APP_SERVICE_ID
+    const templateID = process.env.REACT_APP_TEMPLATE_ID
+
+    if (
+      userID !== undefined &&
+      serviceID !== undefined &&
+      templateID !== undefined
+    ) {
+      init(userID);
+
+      const template_param = {
+        to_name: name,
+        from_email: email,
+        title: subject,
+        message: message,
+      };
+
+
+      send(serviceID, templateID, template_param).then(() => {
+        window.alert('お問い合わせありがとうございます！');
+
+        setName('');
+        setEmail('');
+        setMessage('');
+        setSubject('');
+      });
+    }
+
   };
 
   return (
@@ -31,7 +60,7 @@ function ContactForm() {
       <Navigation />
       <div className="contact-form">
         <h2>お問い合わせ</h2>
-        <form onSubmit={handleSubmit} action='mailto:tukushi0829@icloud.com' method="post" enctype="text/plain">
+        <form>
           <div className="form-group">
             <label htmlFor="name">お名前</label>
             <input
@@ -72,13 +101,13 @@ function ContactForm() {
               required
             ></textarea>
           </div>
-          <button type="submit">送信</button>
+          <button onClick={handleClick} >送信</button>
         </form>
       </div>
 
       <ScrollToTopButton />
       <Footer />
-    </div>
+    </div >
 
   );
 }
