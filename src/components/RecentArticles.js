@@ -51,7 +51,7 @@ function RecentArticles(props) {
 
     if (receivedData) {
         console.log(receivedData[0].tags[0].name)
-        const sortedDatas = [...receivedData].sort((a, b) => new Date(b.date) - new Date(a.date));
+        const sortedDatas = [...receivedData].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
         // 指定された件数だけ取得
         const recentDatas = sortedDatas.slice(0, props.limit);
         var ArticleValueFlg = true;

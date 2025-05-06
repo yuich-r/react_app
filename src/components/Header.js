@@ -4,7 +4,10 @@ import './css/Header.css'; // スタイルシートをインポート
 function Header() {
   return (
     <header>
-      <h1>IT学習アウトプットブログ</h1>
+      <a className="header-link" href="/">
+        <h1>IT学習アウトプットブログ</h1>
+      </a>
+
     </header>
   );
 }

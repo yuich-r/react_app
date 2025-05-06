@@ -4,7 +4,7 @@ import './css/PageNation.css'; // スタイルシートをインポート
 function PageNation(props) {
 	return (
 		<>
-			<p className='pagination'>Click on the items / arrows</p>
+			{/* <p className='pagination'>Click on the items / arrows</p> */}
 			<nav class="pagination">
 				<a href="" class="pagination__arrow pagination__prev">
 					<span class="visuallyhidden">Previous Page</span>

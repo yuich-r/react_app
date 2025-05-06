@@ -33,14 +33,6 @@ function Profile() {
             <p>{profileData.occupation}</p>
           </section>
           <section>
-            <h3>興味のある分野</h3>
-            <ul>
-              {profileData.interests.map((interest, index) => (
-                <li key={index}>{interest}</li>
-              ))}
-            </ul>
-          </section>
-          <section>
             <h3>保有資格</h3>
             <ul>
               {profileData.qualifications.map((qualification, index) => (

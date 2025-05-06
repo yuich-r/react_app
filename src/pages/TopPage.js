@@ -17,6 +17,9 @@ function TopPage() {
       <Navigation />
       <div className='main-content'>
         <RecentArticles limit={2} />
+        <div className='git-glass'>
+          <img src="https://github-contributions-api.deno.dev/yuich-r.svg" />
+        </div>
 
       </div>
       <ScrollToTopButton />

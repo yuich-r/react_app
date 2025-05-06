@@ -31,7 +31,7 @@ function ContactForm() {
       <Navigation />
       <div className="contact-form">
         <h2>お問い合わせ</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} action='mailto:tukushi0829@icloud.com' method="post" enctype="text/plain">
           <div className="form-group">
             <label htmlFor="name">お名前</label>
             <input

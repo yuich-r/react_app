@@ -60,6 +60,7 @@ function ArticleList() {
       // 必要に応じて、新しいページの記事をフェッチするなどの処理を行う
       console.log('Current Page:', newPage);
     };
+    const sortedDatas = [...receivedData].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
     return (
       <div className="container">
         <Header />
@@ -67,7 +68,7 @@ function ArticleList() {
         <div className='main-content'>
           <div className='articles-container'>
 
-            {receivedData.map(data => (
+            {sortedDatas.map(data => (
               <a href='/Content' className='article-container'>
                 <div className='article-thumnail'>
                   <img src={data.thumbnail.url}></img>
