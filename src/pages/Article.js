@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import '../components/css/Article.css';
+import './css/Article.css';
 import './css/Main.css'; // スタイルシートをインポート
 
 

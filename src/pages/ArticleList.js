@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import '../components/css/ArticleList.css'; // スタイルシートをインポート
+import './css/ArticleList.css'; // スタイルシートをインポート
 import { useState, useEffect } from 'react';
 import './css/Main.css'; // スタイルシートをインポート
 import PageNation from '../components/PageNation';

@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import '../components/css/ContactForm.css'; // スタイルシートをインポート
+import './css/ContactForm.css'; // スタイルシートをインポート
 import { init, send } from 'emailjs-com';
 
 

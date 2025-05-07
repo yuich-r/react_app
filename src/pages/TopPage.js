@@ -7,7 +7,7 @@ import RecentArticles from '../components/RecentArticles'; // 新着記事コン
 import './css/Main.css'; // スタイルシートをインポート
 import ProfileContent from '../components/ProfileContent';
 
-import '../components/css/TopPage.css'; // スタイルシートをインポート
+import './css/TopPage.css'; // スタイルシートをインポート
 
 
 
