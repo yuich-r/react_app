@@ -9,7 +9,7 @@ function Navigation() {
         <li><Link to="/">ホーム</Link></li>
         <li><Link to="/articlelist">学習記事</Link></li>
         <li><Link to="/profile">プロフィール</Link></li>
-        <li><Link to="/form">フォーム</Link></li>
+        <li><Link to="/form">お問い合わせ</Link></li>
       </ul>
     </nav>
   );

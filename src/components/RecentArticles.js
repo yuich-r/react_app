@@ -42,7 +42,10 @@ function RecentArticles(props) {
     }, []); // 空の依存配列は、コンポーネントのマウント時に一度だけ実行することを意味します
 
     if (loading) {
-        console.log("Loading...")
+        <div className="recent-articles">
+            <h2>Loading</h2>
+            {console.log(loading)}
+        </div >
     }
 
     if (error) {
@@ -62,60 +65,55 @@ function RecentArticles(props) {
         }
 
         return (
-            <>
-                <div className="recent-articles">
-                    <h2>新着記事</h2>
-                    <div className='article-category'>
-                        <div className='article-category-KBN'>
-                            <p>区分</p>
-                            <div className='article-KBN'>
-                                <ol>
-                                    {recentDatas.map((article) => (
-                                        <li key={article.id}>
-                                            <Link to={`/articles/${article.id}`}>{article.tags[0].name}</Link>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-                        </div>
-                        <div className='article-category-title'>
-                            <p>タイトル</p>
-                            <div className='article-title'>
-                                <ol>
-                                    {recentDatas.map((article) => (
-                                        <li key={article.id}>
-                                            <Link to={`/Content`}>{article.title}</Link>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-                        </div>
-                        <div className='article-category-date'>
-                            <p>更新日</p>
-                            <div className='article-date'>
-                                <ol>
-                                    {recentDatas.map((article) => (
-                                        <li key={article.id}>
-                                            <span>{formatDate(article.updatedAt)}</span>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-
+            <div className="recent-articles">
+                <h2>新着記事</h2>
+                <div className='article-category'>
+                    <div className='article-category-KBN'>
+                        <p>区分</p>
+                        <div className='article-KBN'>
+                            <ol>
+                                {recentDatas.map((article) => (
+                                    <li key={article.id}>
+                                        <Link to={`/articles/${article.id}`}>{article.tags[0].name}</Link>
+                                    </li>
+                                ))}
+                            </ol>
                         </div>
                     </div>
-                    <div className='article-news'>
-
-
+                    <div className='article-category-title'>
+                        <p>タイトル</p>
+                        <div className='article-title'>
+                            <ol>
+                                {recentDatas.map((article) => (
+                                    <li key={article.id}>
+                                        <Link to={`/Content`}>{article.title}</Link>
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
+                    </div>
+                    <div className='article-category-date'>
+                        <p>更新日</p>
+                        <div className='article-date'>
+                            <ol>
+                                {recentDatas.map((article) => (
+                                    <li key={article.id}>
+                                        <span>{formatDate(article.updatedAt)}</span>
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
 
                     </div>
-                    {ArticleValueFlg && <a href='/articleList' className='more-news-link'>もっと見る</a>}
-
-                </div >
-
+                </div>
+                <div className='article-news'>
 
 
-            </>
+
+                </div>
+                {ArticleValueFlg && <a href='/articleList' className='more-news-link'>もっと見る</a>}
+
+            </div >
 
         );
     }

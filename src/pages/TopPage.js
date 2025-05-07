@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import RecentArticles from '../components/RecentArticles'; // 新着記事コンポーネントをインポート
 import './css/Main.css'; // スタイルシートをインポート
+import ProfileContent from '../components/ProfileContent';
 
 import '../components/css/TopPage.css'; // スタイルシートをインポート
 
@@ -18,8 +19,17 @@ function TopPage() {
       <div className='main-content'>
         <RecentArticles limit={2} />
         <div className='git-glass'>
+          <h2>Githubの草</h2>
           <img src="https://github-contributions-api.deno.dev/yuich-r.svg" />
         </div>
+
+
+
+
+        <ProfileContent />
+
+
+
 
       </div>
       <ScrollToTopButton />
