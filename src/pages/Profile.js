@@ -13,7 +13,14 @@ function Profile() {
     <div className="container">
       <Header />
       <Navigation />
-      <ProfileContent />
+      <div className='main-content'>
+
+        <div className='content-block'>
+
+          <ProfileContent />
+        </div>
+      </div>
+
 
       <ScrollToTopButton />
       <Footer />

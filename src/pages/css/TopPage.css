@@ -1,11 +1,4 @@
 .git-glass {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 5px;
-  width: 1000px;
-
 
   h2 {
     text-align: center;
@@ -22,8 +15,9 @@
     margin: auto;
     display: block;
   }
-}
 
+
+}
 
 
 /* メディアクエリ：画面幅が 768px 以下の場合に適用 */

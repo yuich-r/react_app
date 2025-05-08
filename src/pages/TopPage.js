@@ -18,15 +18,17 @@ function TopPage() {
       <Navigation />
       <div className='main-content'>
         <RecentArticles limit={2} />
-        <div className='git-glass'>
-          <h2>Githubの草</h2>
-          <img src="https://github-contributions-api.deno.dev/yuich-r.svg" />
+        <div className='content-block'>
+          <div className='git-glass'>
+            <h2 >Githubの草</h2>
+            <img src="https://github-contributions-api.deno.dev/yuich-r.svg" />
+
+          </div>
         </div>
+        <div className='content-block '>
 
-
-
-
-        <ProfileContent />
+          <ProfileContent />
+        </div>
 
 
 

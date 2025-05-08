@@ -1,12 +1,12 @@
 /* src/components/ContactForm.css */
 .contact-form {
+  margin: auto;
   background-color: #f9f9f9;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin: auto;
   min-width: 600px;
-  width: 800px;
+  max-width: 1000px;
 }
 
 .contact-form h2 {
@@ -17,28 +17,28 @@
 
 .form-group {
   margin-bottom: 15px;
-}
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
-}
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 1em;
-}
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
 
-.form-group textarea {
-  resize: vertical;
+  textarea {
+    resize: vertical;
+  }
 }
 
 .contact-form button[type="submit"] {

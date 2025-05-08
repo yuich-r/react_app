@@ -13,7 +13,7 @@ function Article() {
     <div className="container">
       <Header />
       <Navigation />
-      <div className='main-content'>
+      <div className='article-content'>
         <h2 className='content-h2'>コンテンツ1</h2>
         <p>ここにブログのコンテンツが表示されます。</p>
         <p>ここにブログのコンテンツが表示されます。</p>

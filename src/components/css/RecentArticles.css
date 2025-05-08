@@ -1,21 +1,51 @@
 /* src/components/RecentArticles.css */
 .recent-articles {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 5px;
-  width: 1000px;
+  h2 {
+    text-align: center;
+    margin: 0;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .article-date {
+    color: #777;
+  }
+
 }
 
-.recent-articles h2 {
-  text-align: center;
-  margin: 0;
-  color: #333;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
-}
 
 .more-news-link {
   font-size: 0.8em;
@@ -26,11 +56,11 @@
 
 .article-category {
   display: flex;
-}
 
-.article-category p {
-  padding-bottom: 10px;
-  margin: 0px;
+  p {
+    padding-bottom: 10px;
+    margin: 0px;
+  }
 }
 
 .article-category-KBN {
@@ -41,30 +71,45 @@
   text-overflow: ellipsis;
 }
 
-.article-KBN li {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
+.article-KBN {
+  flex: 1;
+  margin-top: 5px;
+
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
 }
 
-.article-title ul {
-  overflow: hidden;
-  position: relative
+.article-title {
+  flex: 4;
+  margin-top: 5px;
+
+  ul {
+    overflow: hidden;
+    position: relative
+  }
+
+  li {
+    white-space: nowrap;
+
+  }
+
 }
 
+.article-date {
+  flex: 1;
+  margin-top: 5px;
 
-.article-title li {
-  white-space: nowrap;
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
 }
-
-.article-date li {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 
 .article-category-title {
   flex: 4;
@@ -82,57 +127,4 @@
 
 .article-news {
   display: flex;
-}
-
-.article-KBN {
-  flex: 1;
-  margin-top: 5px;
-}
-
-
-.article-title {
-  flex: 4;
-  margin-top: 5px;
-
-
-}
-
-.article-date {
-  flex: 1;
-  margin-top: 5px;
-
-}
-
-.recent-articles h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #333;
-  text-align: center;
-}
-
-.recent-articles ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.recent-articles li {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid 1px #ddd;
-}
-
-.recent-articles a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.recent-articles a:hover {
-  text-decoration: underline;
-}
-
-.recent-articles .article-date {
-  color: #777;
 }
