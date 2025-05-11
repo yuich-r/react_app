@@ -41,7 +41,7 @@
 @media (max-width: 768px) {
 
 
-  .main-content {
+  .toppage-main-content {
     flex-direction: column;
     /* コンテンツを縦に並べる */
   }
