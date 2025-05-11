@@ -12,7 +12,6 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   min-width: 800px;
-  max-width: 1000px;
 }
 
 .contact-form h2 {
@@ -65,6 +64,7 @@
 @media (max-width: 768px) {
   .contact-form {
     width: 100%;
+    min-width: none;
   }
 
 }
