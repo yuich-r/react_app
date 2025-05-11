@@ -48,6 +48,11 @@
     /* コンテンツを縦に並べる */
   }
 
+  .toppage-content-block {
+    width: 100%;
+
+  }
+
   .container {
     width: 100%;
     /* コンテンツの幅を100%にする */
