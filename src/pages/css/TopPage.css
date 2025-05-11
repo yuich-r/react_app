@@ -42,6 +42,8 @@
 
 
   .toppage-main-content {
+    width: 95%;
+
     flex-direction: column;
     /* コンテンツを縦に並べる */
   }
