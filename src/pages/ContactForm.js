@@ -58,7 +58,7 @@ function ContactForm() {
     <div className="container">
       <Header />
       <Navigation />
-      <div className='main-content'>
+      <div className='contactform-main-content'>
         <div className="contact-form">
           <h2>お問い合わせ</h2>
           <form>

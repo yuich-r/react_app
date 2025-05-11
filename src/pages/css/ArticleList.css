@@ -1,3 +1,10 @@
+.articlelist-main-content {
+	/* コンテンツエリアを中央に配置 */
+	flex: 1;
+	width: 80%;
+	margin: 0 auto;
+}
+
 .ariticles-container {
 	margin: 0 auto;
 }

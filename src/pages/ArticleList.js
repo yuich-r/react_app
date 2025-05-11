@@ -65,7 +65,7 @@ function ArticleList() {
       <div className="container">
         <Header />
         <Navigation />
-        <div className='main-content'>
+        <div className='articlelist-main-content'>
           <div className='articles-container'>
 
             {sortedDatas.map(data => (

@@ -1,11 +1,17 @@
-/* src/components/ContactForm.css */
+.contactform-main-content {
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
 .contact-form {
   margin: auto;
   background-color: #f9f9f9;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  min-width: 600px;
+  min-width: 800px;
   max-width: 1000px;
 }
 
