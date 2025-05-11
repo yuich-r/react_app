@@ -5,6 +5,7 @@ body {
 
 .container {
 	min-height: 100vh;
+	min-width: 100vw;
 	/* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
 	display: flex;
 	flex-direction: column;
