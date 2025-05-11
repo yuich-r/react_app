@@ -5,25 +5,28 @@
   justify-content: center;
   margin-bottom: 10px;
   width: 100%;
-}
 
-.header-navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 50px;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 50px;
+  }
 
-.header-navigation a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-}
+  li {
+    font-size: 1rem;
+  }
 
-.header-navigation a:hover {
-  color: #26c6da;
-  /* ホバー時の文字色 */
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    color: #26c6da;
+    /* ホバー時の文字色 */
+  }
 }
 
 @media (max-width: 768px) {}
