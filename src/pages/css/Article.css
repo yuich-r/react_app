@@ -1,18 +1,6 @@
-main {
-    padding: 20px;
-    width: 1000px;
-    /* コンテンツエリアの幅を小さく */
-    background-color: #e0f7fa;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: auto;
-    border-radius: 5px;
-    width: 800px;
-}
-
 .article-content {
+    flex: 1;
+
     border: 1px solid #ddd;
     padding: 15px;
     margin: 20px auto;
