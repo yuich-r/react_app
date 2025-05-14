@@ -20,24 +20,46 @@ main {
     width: 1000px;
 
 
-    h2 {
-        text-align: center;
+    h3 {
         margin: 0;
         color: #333;
         margin-bottom: 15px;
         border-bottom: 2px solid #eee;
         padding-bottom: 5px;
+        border-left: solid 8px #5f7da5;
+        padding: 0.5em 0.5em;
+        background-color: #f8f8f8;
 
     }
 
-}
+    table th {
+        background-color: yellow;
+    }
 
-.content-h2 {
-    border-left: solid 8px #5f7da5;
-    padding: 0.5em 0.5em;
-    background-color: #f8f8f8;
-}
+    table,
+    table th,
+    table td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
 
-p {
-    margin-left: 1em;
+
+    table p {
+        padding: 5px
+    }
+
+    .marker {
+        background-color: #f0f0f0;
+        /* 背景色 */
+        color: #333;
+        /* 文字色 */
+        padding: 5px 10px;
+        /* 内側の余白（上下5px、左右10px） */
+        border-radius: 5px;
+        /* 角を丸くする */
+        font-size: 0.9em;
+        /* 少し小さめのフォントサイズ */
+        white-space: nowrap;
+        /* 文字が折り返されないようにする */
+    }
 }

@@ -75,7 +75,7 @@ function RecentArticles(props) {
                                 <ol>
                                     {recentDatas.map((article) => (
                                         <li key={article.id}>
-                                            <Link to={`/articles/${article.id}`}>{article.tags[0].name}</Link>
+                                            <Link to={`/articles/${article.id}`}>{article.KBN}</Link>
                                         </li>
                                     ))}
                                 </ol>
@@ -87,7 +87,7 @@ function RecentArticles(props) {
                                 <ol>
                                     {recentDatas.map((article) => (
                                         <li key={article.id}>
-                                            <Link to={`/Content`}>{article.title}</Link>
+                                            <Link to={`/Content?id=` + article.id}>{article.title}</Link>
                                         </li>
                                     ))}
                                 </ol>
