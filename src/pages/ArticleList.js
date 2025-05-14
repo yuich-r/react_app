@@ -69,7 +69,7 @@ function ArticleList() {
           <div className='articles-container'>
 
             {sortedDatas.map(data => (
-              <a href='/Content' className='article-container'>
+              <a href={`/Content?id=` + data.id} className='article-container'>
                 <div className='article-thumnail'>
                   <img src={data.thumbnail.url}></img>
                 </div>
