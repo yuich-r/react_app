@@ -1,15 +1,19 @@
 import React from 'react';
-import './css/Sidebar.css'; 
+import './css/Sidebar.css';
 
-function Sidebar() {
+function Sidebar(props) {
+  console.log(props)
   return (
     <aside>
+
       <ol>
-        <li>おすすめ記事</li>
-        <li>最近の投稿</li>
-        <li>カテゴリ</li>
+        {props.titledata.map(item => (
+          < li key={item.id} >
+            <a href={"#" + item.titleid}>{item.title}</a>
+          </li>
+        ))}
       </ol>
-    </aside>
+    </aside >
   );
 }
 

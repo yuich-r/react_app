@@ -8,6 +8,7 @@ import './css/Article.css';
 import './css/Main.css'; // スタイルシートをインポート
 import { useLocation } from "react-router-dom";
 import parse, { domToReact } from 'html-react-parser'
+import Sidebar from '../components/Sidebar'
 
 
 
@@ -63,15 +64,33 @@ function Article() {
 
   if (receivedData) {
     const receivedDataContent = receivedData.content
+    const parseData = parse(receivedDataContent)
+    var titledata = new Array;
+    var titleid = new Array;
+    console.log(parseData[0])
+    for (var i = 0; i < parseData.length; i++) {
+      //console.log(parseData[i].props.children)
+      if (parseData[i].type === "h3") {
+        titledata.push({ id: i, title: parseData[i].props.children, titleid: parseData[i].props.id })
+
+      }
+
+
+    }
+
     return (
 
       <div className="container">
         <Header />
         <Navigation />
-        <div className='article-content'>
-          {parse(receivedDataContent)}
+        <div className='article-content-all'>
+          <div className='article-content'>
+            {parse(receivedDataContent)}
+          </div>
+          <Sidebar titledata={titledata}></Sidebar>
 
         </div>
+
 
         <ScrollToTopButton />
 

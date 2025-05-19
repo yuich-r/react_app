@@ -34,7 +34,11 @@
 	border-left: solid 1px #ddd;
 
 	h2 {
-		margin-left: 10px;
+		margin: 0px 0px 0px 10px;
+		width: 100%;
+		/* h2タグの幅を親要素に合わせる */
+		overflow-wrap: break-word;
+		/* テキストの折り返し設定 */
 	}
 
 	li {

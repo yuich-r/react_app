@@ -1,3 +1,12 @@
+.article-content-all {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 1300px;
+    margin: auto;
+}
+
+
 .article-content {
     flex: 1;
 
@@ -5,12 +14,11 @@
     padding: 15px;
     margin: 20px auto;
     border-radius: 5px;
-    width: 1000px;
-
 
     h3 {
         margin: 0;
         color: #333;
+        margin-top: 70px;
         margin-bottom: 15px;
         border-bottom: 2px solid #eee;
         padding-bottom: 5px;
@@ -49,5 +57,11 @@
         /* 少し小さめのフォントサイズ */
         white-space: nowrap;
         /* 文字が折り返されないようにする */
+    }
+}
+
+@media (max-width: 1300px) {
+    .article-content-all {
+        width: 95%;
     }
 }
