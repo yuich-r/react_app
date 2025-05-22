@@ -54,7 +54,7 @@ function RecentArticles(props) {
 
     if (receivedData) {
         console.log(receivedData[0].tags[0].name)
-        const sortedDatas = [...receivedData].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+        const sortedDatas = [...receivedData].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         // 指定された件数だけ取得
         const recentDatas = sortedDatas.slice(0, props.limit);
         var ArticleValueFlg = true;
@@ -94,12 +94,12 @@ function RecentArticles(props) {
                             </div>
                         </div>
                         <div className='article-category-date'>
-                            <p>更新日</p>
+                            <p>作成日</p>
                             <div className='article-date'>
                                 <ol>
                                     {recentDatas.map((article) => (
                                         <li key={article.id}>
-                                            <span>{formatDate(article.updatedAt)}</span>
+                                            <span>{formatDate(article.createdAt)}</span>
                                         </li>
                                     ))}
                                 </ol>

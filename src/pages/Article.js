@@ -84,9 +84,8 @@ function Article() {
         <Navigation />
         <div className='article-content-all'>
           <div className='article-content'>
-            <h2>{receivedData.description}</h2>
-            <p className='UpdatedAtP'>{"更新日：" + formatDate(receivedData.updatedAt)}</p>
-            <p className='UpdatedAtP'>{"作成日：" + formatDate(receivedData.createdAt)}</p>
+            <h2>{receivedData.title}</h2>
+            <p className='UpdatedAtP'>{"更新日：" + formatDate(receivedData.updatedAt) + "　作成日：" + formatDate(receivedData.createdAt)}</p>
             {receivedData.tags.map((tags) => (
               <span>{tags.name}</span>
             ))}

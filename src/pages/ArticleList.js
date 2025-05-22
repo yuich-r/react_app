@@ -60,7 +60,7 @@ function ArticleList() {
       // 必要に応じて、新しいページの記事をフェッチするなどの処理を行う
       console.log('Current Page:', newPage);
     };
-    const sortedDatas = [...receivedData].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+    const sortedDatas = [...receivedData].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     return (
       <div className="container">
         <Header />
@@ -77,8 +77,8 @@ function ArticleList() {
                   <h2 key={data.id}>{data.title}</h2>
 
                 </div>
-                <div className='article-updatedAd'>
-                  <h4 key={data.id}>{formatDate(data.updatedAt)}</h4>
+                <div className='article-createdAt'>
+                  <h4 key={data.id}>{formatDate(data.createdAt)}</h4>
 
                 </div>
               </a>
