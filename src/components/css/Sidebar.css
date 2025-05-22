@@ -6,7 +6,7 @@ aside {
 
   border-radius: 0;
   background-image: linear-gradient(to bottom, #f9f9f9, #eee);
-  width: 300px;
+  min-width: 300px;
   /* サイドバーの幅を大きく */
   position: sticky;
   /* サイドバーを固定 */
@@ -15,7 +15,13 @@ aside {
   align-self: flex-start;
   /* 親要素の上端に揃える */
   height: fit-content;
+
   /* コンテンツの高さに合わせる */
+  a {
+    text-decoration: none;
+    color: inherit;
+
+  }
 }
 
 @media (max-width: 1300px) {

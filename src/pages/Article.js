@@ -42,7 +42,6 @@ function Article() {
 
         const jsonData = await response.json();
         setReceivedData(jsonData);
-        console.log(receivedData)
         setLoading(false);
 
       } catch (e) {
@@ -67,7 +66,6 @@ function Article() {
     const parseData = parse(receivedDataContent)
     var titledata = new Array;
     var titleid = new Array;
-    console.log(parseData[0])
     for (var i = 0; i < parseData.length; i++) {
       //console.log(parseData[i].props.children)
       if (parseData[i].type === "h3") {
@@ -77,6 +75,7 @@ function Article() {
 
 
     }
+    console.log(receivedData.description)
 
     return (
 
@@ -85,6 +84,12 @@ function Article() {
         <Navigation />
         <div className='article-content-all'>
           <div className='article-content'>
+            <h2>{receivedData.description}</h2>
+            <p className='UpdatedAtP'>{"更新日：" + formatDate(receivedData.updatedAt)}</p>
+            <p className='UpdatedAtP'>{"作成日：" + formatDate(receivedData.createdAt)}</p>
+            {receivedData.tags.map((tags) => (
+              <span>{tags.name}</span>
+            ))}
             {parse(receivedDataContent)}
           </div>
           <Sidebar titledata={titledata}></Sidebar>
@@ -106,5 +111,14 @@ function Article() {
 
 
 }
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}年${month}月${day}日`;
+}
+
 
 export default Article;

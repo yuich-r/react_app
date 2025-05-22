@@ -15,6 +15,31 @@
     margin: 20px auto;
     border-radius: 5px;
 
+    .UpdatedAtP {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    span {
+        display: inline-block;
+        /* spanはデフォルトでinlineなので、幅やパディングを適用するためにinline-blockにする */
+        background-color: #f8f8f8;
+        /* 薄いグレーの背景色 */
+        color: #333;
+        /* 文字色 */
+        padding: 0.3em 0.7em;
+        /* 上下左右のパディング */
+        border-radius: 4px;
+        /* 角丸 */
+        font-size: 0.9em;
+        /* 少し小さめのフォントサイズ */
+        margin: 0 5px 5px 0;
+        /* 他の要素との間隔 */
+        text-decoration: none;
+        /* 下線をなくす（もしリンクと組み合わせる場合） */
+        white-space: nowrap;
+        /* テキストが途中で改行されないようにする */
+    }
+
     h3 {
         margin: 0;
         color: #333;
