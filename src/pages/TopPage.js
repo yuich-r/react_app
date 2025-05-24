@@ -20,15 +20,16 @@ function TopPage() {
         <div className='toppage-content-block '>
           <RecentArticles limit={2} />
         </div>
+
+        <div className='toppage-content-block '>
+          <ProfileContent />
+        </div>
         <div className='toppage-content-block '>
           <div className='git-glass'>
             <h2 >Githubの草</h2>
             <img src="https://github-contributions-api.deno.dev/yuich-r.svg" />
           </div>
 
-        </div>
-        <div className='toppage-content-block '>
-          <ProfileContent />
         </div>
       </div>
       <ScrollToTopButton />
